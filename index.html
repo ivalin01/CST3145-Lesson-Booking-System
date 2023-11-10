@@ -13,7 +13,29 @@
 </head>
 
 <body>
+
     <h1>Lesson booking system!</h1>
+
+
+    <div id="list-of-lessons">
+
+        <div v-for="(subject, index) in Lessons" :key="index" id="subject-box">
+            <div class="box">
+                <img v-bind:src="subject.image">
+                <p id="lessonName" v-text="subject.lessonName"></p>
+                <p v-text="subject.lessonLocation"></p>
+                <p>Price: £{{subject.lessonPrice}}</p>
+                <p>Spaces available: {{subject.lessonSpaces}}</p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="lessons.js"></script>
+    <script src="app.js"></script>
+
 </body>
 
 </html>
