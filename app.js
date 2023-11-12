@@ -51,6 +51,7 @@ let lesson = new Vue({
                 this.show = true
             }
         },
+        //fuction to be able to remove lessons from shopping cart and update the spaces available
         removeFromCart(item) {
             const match = this.allLessons.find(match => match.id === item.id);
 
@@ -59,6 +60,21 @@ let lesson = new Vue({
                 this.cart = this.cart.filter(cartItem => cartItem !== item);
             }
         },
+        //function to check if the inputs in to submit order is valid
+        placeOrder: function () {
+            let lettersOnly = /^[A-z]+$/;
+            let numbersOnly = /^[0-9]+$/;
+
+            if (!lettersOnly.test(this.order.FullName) && (!numbersOnly.test(this.order.PhoneNumber))) {
+                alert("use letters for first name and numbers for phone number");
+            } else if (!lettersOnly.test(this.order.FullName)) {
+                alert("use letters for first name");
+            } else if (!numbersOnly.test(this.order.PhoneNumber)) {
+                alert("use numbers only");
+            } else {
+                alert("Order Submitted");
+            }
+        }
 
     },
 

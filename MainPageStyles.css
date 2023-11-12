@@ -109,3 +109,56 @@ p {
     font-weight: bold;
     color: rgb(235, 235, 18);
 }
+#checkouth1 {
+    color: rgb(235, 235, 18);
+    text-align: left;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+#checkoutContainer {
+    display: list-item;
+    background: rgba(189, 129, 77, 0.9);
+    padding: 10px;
+    margin-left: 10px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+input {
+    width: 280px;
+    height: 30px;
+}
+
+#orderInfoh2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#orderInfo {
+    display: list-item;
+    background: rgba(189, 129, 77, 0.9);
+    padding: 10px;
+    margin-left: 10px;
+    width: 400px;
+    border-radius: 15px;
+    margin-top: 20px;
+    
+}
+
+#Fname {
+    text-align: left;
+}
+
+#PhoneNum {
+    text-align: left;
+}
+
+#placeOrderButton {
+    border-radius: 5px;
+    background: rgba(2, 48, 32, 0.8);
+    width: 200px;
+    height: 35px;
+    font-weight: bold;
+    color: rgb(235, 235, 18)
+}
