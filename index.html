@@ -20,6 +20,14 @@
 
     <div id="list-of-lessons">
 
+        <!-- shopping cart button  -->
+        <header>
+            <button id="shoppingCart">
+                Shopping cart:
+                {{itemsInCart}}
+            </button>
+        </header>
+
         <main>
             <!-- Container for all the lessons including buttons to add to cart  -->
             <div v-for="subject in allLessons" id="subject-box">

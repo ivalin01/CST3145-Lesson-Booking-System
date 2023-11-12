@@ -47,7 +47,7 @@ let lesson = new Vue({
 
     computed: {
         //function to return the number of items in the cart
-        itemsInTheCart: function () {
+        itemsInCart: function () {
             return this.cart.length || "";
         },
 
