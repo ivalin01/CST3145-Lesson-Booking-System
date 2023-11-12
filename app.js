@@ -66,11 +66,11 @@ let lesson = new Vue({
             let numbersOnly = /^[0-9]+$/;
 
             if (!lettersOnly.test(this.order.FullName) && (!numbersOnly.test(this.order.PhoneNumber))) {
-                alert("use letters for first name and numbers for phone number");
+                alert("Use letters for Full name and numbers for phone number");
             } else if (!lettersOnly.test(this.order.FullName)) {
-                alert("use letters for first name");
+                alert("Use letters only for Full name");
             } else if (!numbersOnly.test(this.order.PhoneNumber)) {
-                alert("use numbers only");
+                alert("Use numbers only for Phone number");
             } else {
                 alert("Order Submitted");
             }
