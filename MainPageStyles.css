@@ -8,7 +8,7 @@ h1 {
 
 body {
     background-image: url(/CST3145-Lesson-Booking-System/images/background.jpg);
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
 }
 
@@ -50,4 +50,39 @@ p {
     font-weight: bold;
     font-size: 20px;
     color: rgb(2, 48, 32)
+}
+
+#shoppingCart {
+    width: 200px;
+    background-color: aliceblue;
+    height: 50px;
+    text-align: left;
+    margin-left: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    background: rgba(2, 48, 32, 0.8);
+    margin-left: 15px;
+    color: rgb(235, 235, 18)
+}
+
+#addToCartButton {
+    border-radius: 5px;
+    background: rgba(2, 48, 32, 0.8);
+    width: 200px;
+    height: 30px;
+    margin-left: 15px;
+    font-weight: bold;
+    color: rgb(235, 235, 18)
+}
+
+#addToCartDisabled {
+    background-color: darkred;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    margin-left: 15px;
+    font-weight: bold;
+    color: rgb(235, 235, 18);
+    cursor: not-allowed;
 }

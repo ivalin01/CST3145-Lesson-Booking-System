@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device=width, initial-scale=1.0">
-    <!-- include the style sheet-->
+    <!-- include style sheet-->
     <link rel="stylesheet" href="MainPageStyles.css">
-    <!-- Vue.js library -->
+    <!-- Include Vue.js library -->
     <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
-    <title>Lesson booking system</title>
+
+    <title>Lesson booking</title>
 
 </head>
 
@@ -19,19 +20,29 @@
 
     <div id="list-of-lessons">
 
-        <div v-for="(subject, index) in Lessons" :key="index" id="subject-box">
-            <div class="box">
-                <img v-bind:src="subject.image">
-                <p id="lessonName" v-text="subject.lessonName"></p>
-                <p v-text="subject.lessonLocation"></p>
-                <p>Price: £{{subject.lessonPrice}}</p>
-                <p>Spaces available: {{subject.lessonSpaces}}</p>
+        <main>
+            <!-- Container for all the lessons including buttons to add to cart  -->
+            <div v-for="subject in allLessons" id="subject-box">
+                <div class="box">
+                    <img v-bind:src="subject.image">
+                    <p id="lessonName" v-text="subject.lessonName"></p>
+                    <p v-text="subject.lessonLocation"></p>
+                    <p>Price: £{{subject.lessonPrice}}</p>
+                    <p v-if="subject.lessonSpaces === 0"> All out!</p>
+                    <p v-else-if="subject.lessonSpaces < 5">Only {{subject.lessonSpaces}}</p>
+                    <p v-else>Spaces available: {{subject.lessonSpaces}}</p>
+                    <button id="addToCartButton" v-if="canAddInCart(subject)" v-on:click="addItemToCart(subject)">Add to
+                        Cart</button>
+                    <button id="addToCartDisabled" v-else disabled> out of spaces</button>
+                </div>
             </div>
-        </div>
 
+        </main>
 
     </div>
 
+
+    </div>
 
     <script src="lessons.js"></script>
     <script src="app.js"></script>
