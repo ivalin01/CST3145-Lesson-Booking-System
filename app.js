@@ -52,7 +52,7 @@ let lesson = new Vue({
             }
         },
         //fuction to be able to remove lessons from shopping cart and update the spaces available
-        removeFromCart(item) {
+        RemoveFromCart(item) {
             const match = this.allLessons.find(match => match.id === item.id);
 
             if (match && match.lessonSpaces >= 0) {

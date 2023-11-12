@@ -57,7 +57,7 @@
             <!-- Container for each lesson added  -->
             <div v-for="item in cart" id="cartContainer">
                 {{item.name}} - {{item.location}} - Price: £{{item.price}}
-                <button @click="removeFromCart(item)" id="removeFromCart">Remove</button>
+                <button @click="RemoveFromCart(item)" id="removeFromCart">Remove</button>
             </div>
 
         </div>
@@ -84,6 +84,7 @@
                 :disabled="!order.FullName || !order.PhoneNumber">Place Order</button>
 
         </div>
+         
 
     </div>
 
