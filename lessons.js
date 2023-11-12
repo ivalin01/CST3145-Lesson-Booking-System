@@ -85,7 +85,7 @@ let Lessons = [
     "lessonLocation": "Harrow",
     "lessonPrice": 60,
     "lessonSpaces": 8,
-    "image": "images/Music.jpg"
+    "image": "images/mechanicalengineering.jpg"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@ let Lessons = [
     "lessonLocation": "Wartford",
     "lessonPrice": 40,
     "lessonSpaces": 12,
-    "image": "images/Music.jpg"
+    "image": "images/philosophy.jpg"
   },
  
 ];
