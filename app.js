@@ -43,6 +43,15 @@ let lesson = new Vue({
         canAddInCart(subject) {
             return subject.lessonSpaces > this.cartCount(subject.id);
         },
+
+        showCheckout: function () {
+            if (this.show) {
+                this.show = false
+            } else {
+                this.show = true
+            }
+        },
+
     },
 
     computed: {
