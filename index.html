@@ -59,32 +59,33 @@
                 {{item.name}} - {{item.location}} - Price: £{{item.price}}
                 <button @click="RemoveFromCart(item)" id="removeFromCart">Remove</button>
             </div>
+            <!-- Container to add personal data for checkout  -->
+            <div id="checkoutContainer">
+
+                <p>
+                    <strong>Full Name: </strong>
+                    <input type="text" v-model.trim="order.FullName">
+                </p>
+                <p>
+                    <strong>Phone Number: </strong>
+                    <input type="text" v-model.trim="order.PhoneNumber">
+                </p>
+
+            </div>
+            <!-- Container for Order information  -->
+            <div id="orderInfo">
+
+                <h2 id="orderInfoh2">Order Information</h2>
+                <p id="Fname"> <strong>Full Name: </strong>{{order.FullName}} </p>
+                <p id="PhoneNum"> <strong>Phone Number: </strong>{{order.PhoneNumber}} </p>
+                <button id="placeOrderButton" v-on:click="placeOrder"
+                    :disabled="!order.FullName || !order.PhoneNumber">Place Order</button>
+
+            </div>
 
         </div>
-        <!-- Container to add personal data for checkout  -->
-        <div id="checkoutContainer">
 
-            <p>
-                <strong>Full Name: </strong>
-                <input type="text" v-model.trim="order.FullName">
-            </p>
-            <p>
-                <strong>Phone Number: </strong>
-                <input type="text" v-model.trim="order.PhoneNumber">
-            </p>
 
-        </div>
-        <!-- Container for Order information  -->
-        <div id="orderInfo">
-
-            <h2 id="orderInfoh2">Order Information</h2>
-            <p id="Fname"> <strong>Full Name: </strong>{{order.FullName}} </p>
-            <p id="PhoneNum"> <strong>Phone Number: </strong>{{order.PhoneNumber}} </p>
-            <button id="placeOrderButton" v-on:click="placeOrder"
-                :disabled="!order.FullName || !order.PhoneNumber">Place Order</button>
-
-        </div>
-         
 
     </div>
 
