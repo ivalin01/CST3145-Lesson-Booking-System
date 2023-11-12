@@ -51,6 +51,14 @@ let lesson = new Vue({
                 this.show = true
             }
         },
+        removeFromCart(item) {
+            const match = this.allLessons.find(match => match.id === item.id);
+
+            if (match && match.lessonSpaces >= 0) {
+                match.lessonSpaces++;
+                this.cart = this.cart.filter(cartItem => cartItem !== item);
+            }
+        },
 
     },
 

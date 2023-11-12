@@ -86,3 +86,26 @@ p {
     color: rgb(235, 235, 18);
     cursor: not-allowed;
 }
+
+#cartContainer {
+    display: inline-block;
+    background: rgba(189, 129, 77, 0.7);
+    padding: 10px;
+    margin: 25px;
+    border-radius: 10px;
+    margin-left: 15px;
+    width: 190px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(2, 48, 32)
+}
+
+#removeFromCart {
+    background-color: darkred;
+    border-radius: 5px;
+    width: 100px;
+    height: 25px;
+    margin-left: 15px;
+    font-weight: bold;
+    color: rgb(235, 235, 18);
+}
